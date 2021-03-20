@@ -3,7 +3,7 @@ Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,Bli
 Chart.defaults.global.defaultFontColor = '#858796';
 
 // Pie Chart Example
-var ctx = document.getElementById("myPieChart");
+/* var ctx = document.getElementById("myPieChart");
 var myPieChart = new Chart(ctx, {
   type: 'doughnut',
   data: {
@@ -32,7 +32,7 @@ var myPieChart = new Chart(ctx, {
     },
     cutoutPercentage: 80,
   },
-});
+});*/
 
 var r01 = document.getElementById("rp01");
 var rp01 = new Chart(r01, {

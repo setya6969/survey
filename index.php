@@ -11,25 +11,25 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <script>AOS.init();</script>
-<body>
+<body style="background-color: #198fe3;">
     <div class="main-content-container container-fluid px-4">
         <!-- page header -->
-        <div class="page-header row no-gutters py-4 mb-5">
+        <div class="page-header row no-gutters py-4 mb-5" style="color: white;">
             <div class="col-12 text-center text-sm-center mb-0">
-                <img src="" alt="">
-                <br>
-                <span class="text-uppercase page-subtitle">Teknik Elektro</span>
+                <a href="">
+                    <img style="max-width=100"src="http://elektro.um.ac.id/wp-content/uploads/2016/02/logo-um.png" alt="Teknik Elektro – UM">    
+                </a>
                 <h3 class="page-title mt-4">Teknik Elektro</h3>
             </div>
         </div>
-        <div align="center">
+        <div align="center" style="color: white;">
             <b>
                 <h5>Tracer Alumni</h5>
             </b>
         </div>
         <!-- form -->
         <div align="center">
-            <div class="col-lg-12 text-sm-left">
+            <div class="col-lg-8 text-sm-left">
                 <div class="card card-small mb-4">
                     <div class="card-header border-bottom">
                         <h6 class="m-0">
@@ -39,35 +39,30 @@
                     </div>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item p-3">
-                            <div class="row">
-                                <div class="col">
-                                    <form method="POST" action="function/f_bio.php">
-                                        <div class="form-row">
-                                            <div class="form-group col-md-6">
-                                                <label for="Nama">
-                                                    Nama
-                                                    <i>(Name)</i>
-                                                </label>
-                                                <input type="text" class="form-control" id="name" placeholder="Nama" name="name">
-                                            </div>
-                                            <div class="form-group col-md-6">
-                                                <label for="email">Email</label>
-                                                <input type="email" class="form-control" id="email" placeholdere="Email" name="email">
-                                            </div>
-                                        </div>    
-                                        <div class="form-row">
-                                            <div class="form-group col-md-6">
-                                                <label for="prodi">
-                                                    Program Studi
-                                                    <i>(Study program)</i>
-                                                </label>
-                                                <select name="prodi" id="prodi" class="select2 form-control select2-hidden-accessible" required placeholder="Program Studi" data-select2-id="prodi" aria-hidden="true" style="width:650px;">
-                                                    <option value="">--Pilih Program Studi--</option>
-                                                    <option value="TI">S1 Teknik Informatika</option>
-                                                    <option value="TE">S1 Teknik Elektro</option>
-                                                    <option value="PTI">S1 Pendidikan Teknik Informatika</option>
-                                                    <option value="PTE">S1 Pendidikan Teknik Elektro</option>
-                                                </select>
+                            <form method="POST" action="function/f_bio.php">
+                                <div class="">
+                                    <label for="Nama">
+                                        Nama
+                                        <i>(Name)</i>
+                                    </label>
+                                    <input type="text" class="form-control" id="name" placeholder="Nama" name="name">
+                                </div>
+                                <div class="">
+                                    <label for="email">Email</label>
+                                    <input type="email" class="form-control" id="email" placeholdere="Email" name="email">
+                                </div>
+                                <div class="">
+                                    <label for="prodi">
+                                        Program Studi
+                                        <i>(Study program)</i>
+                                    </label>
+                                    <select name="prodi" id="prodi" class="select2 form-control select2-hidden-accessible" required placeholder="Program Studi" data-select2-id="prodi" aria-hidden="true" style="width:852px;">
+                                        <option value="">--Pilih Program Studi--</option>
+                                        <option value="TI">S1 Teknik Informatika</option>
+                                        <option value="TE">S1 Teknik Elektro</option>
+                                        <option value="PTI">S1 Pendidikan Teknik Informatika</option>
+                                        <option value="PTE">S1 Pendidikan Teknik Elektro</option>
+                                    </select>
                                                 <!--
                                                 <span class="select2 select2-container select2-container--default" dir="ltr" style="width:647px;">
                                                     <span class="selection">
@@ -86,71 +81,85 @@
                                                     </span>
                                                 </span>
                                                 -->
-                                            </div>
-                                            <div class="form-group col-md-6 inline-group">
-                                                <p>Jenis Kelamin <i>(Gender)</i></p>
-                                                <label for="male" class="radio-inline">
-                                                    <input type="radio" name="gender" id="male" value="male"><i></i> Laki-laki <i>(Male)</i>    
-                                                </label>
-                                                <label for="female" class="radio-inline">
-                                                    <input type="radio" name="gender" id="female" value="female"><i></i> Perempuan <i>(Female)</i>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="form-row">
-                                            <div class="form-group col-md-6">
-                                                <label for="angkatan">
-                                                    Angkatan
-                                                </label>
-                                                <select name="angkatan" id="angkatan" class="select2 form-control select2-hidden-accessible" required placeholder="Angkatan" data-select2-id="angkatan" aria-hidden="true" style="width:650px;">
-                                                    <option value="">--Pilih Angkatan--</option>
-                                                    <option value="1997">1997</option>
-                                                    <option value="1998">1998</option>
-                                                    <option value="1999">1999</option>
-                                                    <option value="2000">2000</option>
-                                                    <option value="2001">2001</option>
-                                                    <option value="2002">2002</option>
-                                                    <option value="2003">2003</option>
-                                                    <option value="2004">2004</option>
-                                                    <option value="2005">2005</option>
-                                                    <option value="2006">2006</option>
-                                                    <option value="2007">2007</option>
-                                                    <option value="2008">2008</option>
-                                                    <option value="2009">2009</option>
-                                                    <option value="2010">2010</option>
-                                                    <option value="2011">2011</option>
-                                                    <option value="2012">2012</option>
-                                                    <option value="2013">2013</option>
-                                                    <option value="2014">2014</option>
-                                                    <option value="2015">2015</option>
-                                                    <option value="2016">2016</option>
-                                                    <option value="2017">2017</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group col-md-6">
-                                                <label for="phone">
-                                                    Nomor Telepon 
-                                                    <i>(Phone Number)</i>
-                                                </label>
-                                                <input type="text" class="form-control" name="phone" id="phone" placeholder="Phone Number">
-                                            </div>
-                                        </div>
-                                        <div class="form-row">
-                                            <div class="form-group col-md-6">
-                                                <label for="ipk">
-                                                    Indeks Prestasi Kumulatif
-                                                    <i>(IPK)</i>
-                                                </label>
-                                                <input type="text" class="form-control" name="ipk" id="ipk" placeholder="IPK">
-                                            </div>
-                                        </div>
-                                        <button type="submit" class="btn btn-primary">
-                                            Mulai Isi Angket
-                                            <i>(Start)</i>
-                                        </button>
-                                    </form>
                                 </div>
-                            </div>
+                                <div class=" inline-group">
+                                    <p>Jenis Kelamin <i>(Gender)</i></p>
+                                    <label for="male" class="radio-inline">
+                                        <input type="radio" name="gender" id="male" value="male"><i></i> Laki-laki <i>(Male)</i>    
+                                    </label>
+                                    <label for="female" class="radio-inline">
+                                        <input type="radio" name="gender" id="female" value="female"><i></i> Perempuan <i>(Female)</i>
+                                    </label>
+                                </div>
+                                <div class="">
+                                    <label for="angkatan">
+                                        Angkatan
+                                    </label>
+                                    <select name="angkatan" id="angkatan" class="select2 form-control select2-hidden-accessible" required placeholder="Angkatan" data-select2-id="angkatan" aria-hidden="true" style="width:852px;">
+                                        <option value="">--Pilih Angkatan--</option>
+                                        <option value="1997">1997</option>
+                                        <option value="1998">1998</option>
+                                        <option value="1999">1999</option>
+                                        <option value="2000">2000</option>
+                                        <option value="2001">2001</option>
+                                        <option value="2002">2002</option>
+                                        <option value="2003">2003</option>
+                                        <option value="2004">2004</option>
+                                        <option value="2005">2005</option>
+                                        <option value="2006">2006</option>
+                                        <option value="2007">2007</option>
+                                        <option value="2008">2008</option>
+                                        <option value="2009">2009</option>
+                                        <option value="2010">2010</option>
+                                        <option value="2011">2011</option>
+                                        <option value="2012">2012</option>
+                                        <option value="2013">2013</option>
+                                        <option value="2014">2014</option>
+                                        <option value="2015">2015</option>
+                                        <option value="2016">2016</option>
+                                        <option value="2017">2017</option>
+                                    </select>
+                                </div>
+                                <div class="">
+                                    <label for="phone">
+                                        Nomor Telepon 
+                                        <i>(Phone Number)</i>
+                                    </label>
+                                    <input type="text" class="form-control" name="phone" id="phone" placeholder="Phone Number">
+                                </div>
+                                <div class="">
+                                    <label for="ipk">
+                                        Indeks Prestasi Kumulatif
+                                        <i>(IPK)</i>
+                                    </label>
+                                    <input type="text" class="form-control" name="ipk" id="ipk" placeholder="IPK">
+                                </div>
+                                <div>
+                                    <label for="domisili">
+                                        Daerah Tinggal
+                                        <i>(Domisili)</i>
+                                    </label>
+                                    <input type="text" class="form-control" nama="domisili" id="domisili" placeholder="Domisili">
+                                </div>
+                                <div>
+                                    <label for="status">
+                                        Kegiatan setelah Lulus
+                                        <i>(Activity after Graduation)</i>
+                                    </label>
+                                    <select name="activity" id="activity" class="select2 form-control select2-hidden-accessible" 
+                                    required placeholder="Activity" data-select2-id="activity" aria-hidden="true" style="width:852px;">
+                                        <option value="">--Pilih Kegiatan--</option>
+                                        <option value="slanjut">Studi Lanjut</option>
+                                        <option value="bekerja">Bekerja</option>
+                                        <option value="wirausaha">Wirausaha</option>
+                                    </select>
+                                </div>
+                                <br>
+                                <button type="submit" class="btn btn-primary">
+                                     Mulai Isi Angket
+                                    <i>(Start)</i>
+                                </button>
+                            </form>
                         </li>
                     </ul>
                 </div>

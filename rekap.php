@@ -27,8 +27,6 @@
 
 </head>
 
-<script src="js/demo/chart-pie-demo.js"></script>
-
 <body id="page-top">
 
     <!-- Page Wrapper -->
@@ -72,11 +70,6 @@
                                         </div>
                                     </div>
                                    
-                                    <div class="col-lg-4">
-                                        <div class="chart-pie pt-3">
-                                            <canvas id="rp01"></canvas>
-                                        </div>
-                                    </div>
                                     
                                 </div>
                             </div>
@@ -145,6 +138,12 @@
 
     <!-- Page level plugins -->
     <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts-->
+    <script src="js/demo/chart-pie-demo.js"></script>
+
+    
+
 </body>
 
 </html>

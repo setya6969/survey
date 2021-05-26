@@ -26,16 +26,15 @@
     $values .= "'$user_id', '$name', '$email', '$prodi', '$gender', '$angkatan', '$phone', '$ipk', '$domisili', '$activity')";
 
     if($mysqli->query($query)){
-        header("location : ".BASE_URL."angket");
-        exit();                   
-    }else{
-       if($mysqli->errno($conn) == 1062)
-       {
+        if($mysqli->errno($conn) == 1062)
+        {
             echo "duplicate entry no need to insert into DB";
-       }    
-       else
-       {
-            echo "failed " . $mysqli->error;     
-       }
+        } else{
+            header("location : ".BASE_URL."angket");
+        }                   
+    }else{
+        echo "failed " . $mysqli->error;          
     }
+
+    
 ?>

@@ -22,19 +22,32 @@
     $domisili = $mysqli->real_escape_string($_POST['domisili']);
     $activity = $mysqli->real_escape_string($_POST['activity']);
 
-    $query = "INSERT INTO biodata_mahasiswa (`user_id`, `name`,`email`,`prodi`,`gender`,`angkatan`,`phone`, `ipk`, `domisili`, `activity`) VALUES(".
-    $values .= "'$user_id', '$name', '$email', '$prodi', '$gender', '$angkatan', '$phone', '$ipk', '$domisili', '$activity')";
+    // $query = "INSERT INTO biodata_mahasiswa (`user_id`, `name`,`email`,`prodi`,`gender`,`angkatan`,`phone`, `ipk`, `domisili`, `activity`) VALUES(".
+    // $values .= "'$user_id', '$name', '$email', '$prodi', '$gender', '$angkatan', '$phone', '$ipk', '$domisili', '$activity')";
 
-    if($mysqli->query($query)){
-        if($mysqli->errno($conn) == 1062)
+    $query = "INSERT INTO biodata_mahasiswa (`user_id`, `name`,`email`,`prodi`,`gender`,`angkatan`,`phone`, `ipk`, `domisili`, `activity`) SELECT * FROM (SELECT '$user_id', '$name', '$email', '$prodi', '$gender', '$angkatan', $phone, $ipk, '$domisili', '$activity') AS tmp WHERE NOT EXISTS (SELECT `name` from biodata_mahasiswa WHERE `name` = '$name') LIMIT 1";
+
+    // Checking error mysql insert data
+    if($mysqli->query($query))
+    {
+        // Check duplicated data message
+        // this affected rows will show 1 or 0 for output
+        // if affected rows 1, data was successfully entered into the database
+        // if affected rows 0, there is duplicated data
+        if($mysqli->affected_rows)
+        {
+            echo "Success add data to database";
+            // Triger to another page
+            // header("location : ".BASE_URL."angket");
+
+        }
+        else
         {
             echo "duplicate entry no need to insert into DB";
-        } else{
-            header("location : ".BASE_URL."angket");
-        }                   
-    }else{
-        echo "failed " . $mysqli->error;          
+        }
     }
-
-    
+    else
+    {
+        echo "Insert failed with error (" .$mysqli->error.")";
+    }
 ?>

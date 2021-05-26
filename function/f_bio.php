@@ -26,7 +26,7 @@
     $values .= "'$user_id', '$name', '$email', '$prodi', '$gender', '$angkatan', '$phone', '$ipk', '$domisili', '$activity')";
 
     if($mysqli->query($query)){
-        if($mysqli->errno($conn) == 1062)
+        if($mysqli->errno() == 1062)
         {
             echo "duplicate entry no need to insert into DB";
         } else{

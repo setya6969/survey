@@ -24,7 +24,24 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
+    <script>
+        window.onload = function () {
+ 
+            var chart = new CanvasJS.Chart("chartContainer", {
+	        animationEnabled: true,
+	        exportEnabled: true,
+	        theme: "light1", // "light1", "light2", "dark1", "dark2"
+	        title:{
+		        text: "PHP Column Chart from Database"
+	        },
+	        data: [{
+		        type: "column", //change type to bar, line, area, pie, etc  
+		        dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
+	        }]
+        });
+        chart.render();
+        }
+    </script>
 </head>
 
 <body id="page-top">
@@ -47,83 +64,76 @@
         </div>
 
         <!-- html -->
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item p-3">
-                <div class="row">
-                    <div class="col-lg-6 mb-4">
-                        <div class="card shadow mb-4">
-                            <div class="card-body">
+        <div align="center">
+            <!--<ul class="list-group list-group-flush">
+                <li class="list-group-item p-3">-->
+                    <!--<div class="row">-->
+                        <div class="card shadow col-lg-10 text-sm-left mb-4">
+                            <div class="card-body ">
                                 <h4 class="small font-weight-bold" style="font-size:15px">
-                                Apakah anda menjalankan wirausaha ?   
+                                 Apakah anda menjalankan wirausaha ?   
                                 </h4>
-                                <div class="row">
-                                    <div class="col-lg-8">
-                                        <h5 class="small">Ya <span class="float-right">20%</span></h5>
-                                        <div class="progress mb-4">
-                                            <div class="progress-bar bg-success" role="progressbar" style="width:20%"
-                                            aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                        <h5 class="small">Tidak <span class="float-right">75%</span></h5>
-                                        <div class="progress mb-4">
-                                            <div class="progress-bar bg-danger" role="progressbar" style="width:75%"
-                                            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-                                   
-                                    
+                                <h5 class="small">Ya <span class="float-right">20%</span></h5>
+                                <div class="progress mb-4">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width:20%"
+                                    aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
-                            </div>
-                            <div class="card-body">
-                            
+                                <h5 class="small">Tidak <span class="float-right">75%</span></h5>
+                                <div class="progress mb-4">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width:75%"
+                                    aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div> 
+                                <div id="chartContainer" style="height: 370px; width: 100%;"></div>            
                             </div>
                         </div>  
-                    </div>
-                    <div class="col-lg-6 mb 4">
-                        <div class="card shadow mb-4"></div>
-                    </div>
+                        <div class="col-lg-10 mb 4">
+                            <div class="card shadow mb-4"></div>
+                        </div>
+                    <!--</div>-->
+                <!--</li>-->
+                <!--<div class="col-lg-6 mb-4">-->
+                    <!-- Project Card Example 
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Projects</h6>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="small font-weight-bold">Server Migration <span class="float-right">20%</span></h4>
+                            <div class="progress mb-4">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 20%"
+                                aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h4 class="small font-weight-bold">Sales Tracking <span class="float-right">40%</span> </h4>
+                            <div class="progress mb-4">
+                                <div class="progress-bar bg-warning" role="progressbar" style="width: 40%"
+                                aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h4 class="small font-weight-bold">Customer Database <span
+                            class="float-right">60%</span></h4>
+                            <div class="progress mb-4">
+                                <div class="progress-bar" role="progressbar" style="width: 60%"
+                                aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h4 class="small font-weight-bold">Payout Details <span
+                                class="float-right">80%</span></h4>
+                            <div class="progress mb-4">
+                                <div class="progress-bar bg-info" role="progressbar" style="width: 80%"
+                                aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h4 class="small font-weight-bold">Account Setup <span
+                                class="float-right">Complete!</span></h4>
+                            <div class="progress">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 100%"
+                                aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div> -->
+                    <div class="card shadow mb-4"></div>
+                    <div class="card shadow mb-4"></div>
+                    <div class="card shadow mb-4"></div>
                 </div>
-            </li>
-            <!--<div class="col-lg-6 mb-4">-->
-                <!-- Project Card Example 
-                <div class="card shadow mb-4">
-                    <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-primary">Projects</h6>
-                    </div>
-                    <div class="card-body">
-                        <h4 class="small font-weight-bold">Server Migration <span class="float-right">20%</span></h4>
-                        <div class="progress mb-4">
-                            <div class="progress-bar bg-danger" role="progressbar" style="width: 20%"
-                            aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <h4 class="small font-weight-bold">Sales Tracking <span class="float-right">40%</span> </h4>
-                    <div class="progress mb-4">
-                        <div class="progress-bar bg-warning" role="progressbar" style="width: 40%"
-                        aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <h4 class="small font-weight-bold">Customer Database <span
-                    class="float-right">60%</span></h4>
-                    <div class="progress mb-4">
-                        <div class="progress-bar" role="progressbar" style="width: 60%"
-                            aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <h4 class="small font-weight-bold">Payout Details <span
-                        class="float-right">80%</span></h4>
-                    <div class="progress mb-4">
-                        <div class="progress-bar bg-info" role="progressbar" style="width: 80%"
-                        aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <h4 class="small font-weight-bold">Account Setup <span
-                     class="float-right">Complete!</span></h4>
-                    <div class="progress">
-                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%"
-                        aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                </div> -->
-                <div class="card shadow mb-4"></div>
-                <div class="card shadow mb-4"></div>
-                <div class="card shadow mb-4"></div>
-            </div>
-        </ul>
+            <!--</ul>-->
+        </div>
+        
     </div>
 
     <!-- Bootstrap core JavaScript-->
@@ -141,7 +151,8 @@
 
     <!-- Page level custom scripts-->
     <script src="js/demo/chart-pie-demo.js"></script>
-
+    
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     
 
 </body>

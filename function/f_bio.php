@@ -40,7 +40,7 @@
         {
             echo "Success add data to database";
             // Triger to another page
-            // header("location : ".BASE_URL."angket");
+            header("location : ".BASE_URL."angket.php");
 
         }
         else

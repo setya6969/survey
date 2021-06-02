@@ -79,13 +79,17 @@
     </style>
 </head>
 
-<body>
+<body style="background-color: #198fe3;"> 
 
     <div class="main-content-container container-fluid px-4">
         <div id="particles-js"></div>
         <!-- Page Header -->
-        <div class="page-header row no-gutters py-4 mb-5">
+        <div class="page-header row no-gutters py-4 mb-5" style="color: white">
             <div class="col-12 text-center text-sm-center mb-0">
+                <br>
+                <a href="index.php">
+                    <img style="max-width=100"src="http://elektro.um.ac.id/wp-content/uploads/2016/02/logo-um.png" alt="Teknik Elektro – UM">    
+                </a>
                 <br>
                 <span class="text-uppercase page-subtitle">Jurusan Teknik Elektro - Universitas Negeri Malang</span>
 
@@ -94,7 +98,8 @@
             </div>
         </div>
 
-        <form action="koneksifix.php" method="post">
+        <!-- FORM QUESTION 1-31 -->
+        <form action="koneksi.php" method="POST">
             <div align="center">
                 <div class="col-lg-8 text-sm-left">
                     <div class="card card-small mb-4">
@@ -183,19 +188,19 @@
                                             <div class="form-group col-md-12 text-sm-left">
                                                 <fieldset>
                                                     <div class="custom-control custom-checkbox mb-1">
-                                                        <input type="checkbox" class="custom-control-input" id="c1q3">
+                                                        <input type="checkbox" name="q3" class="custom-control-input" id="c1q3">
                                                         <label class="custom-control-label" for="c1q3">TOEFL, score </label>
-                                                        <input type="text" name="q3" id="c1q3_input" class="form-control">
+                                                        <input type="text" name="q3a" id="c1q3_input" class="form-control">
                                                     </div>
                                                     <div class="custom-control custom-checkbox mb-1">
-                                                        <input type="checkbox" class="custom-control-input" id="c2q3">
+                                                        <input type="checkbox" name="q3" class="custom-control-input" id="c2q3">
                                                         <label class="custom-control-label" for="c2q3">TOEIC, score </label>
-                                                        <input type="text" name="q3" id="c2q3_input" class="form-control">
+                                                        <input type="text" name="q3b" id="c2q3_input" class="form-control">
                                                     </div>
                                                     <div class="custom-control custom-checkbox mb-1">
-                                                        <input type="checkbox" class="custom-control-input" id="c3q3">
+                                                        <input type="checkbox" name="q3" class="custom-control-input" id="c3q3">
                                                         <label class="custom-control-label" for="c3q3">IELTS, score </label>
-                                                        <input type="text" name="q3" id="c3q3_input" class="form-control">
+                                                        <input type="text" name="q3c" id="c3q3_input" class="form-control">
                                                     </div>
                                                 </fieldset>
                                             </div>
@@ -249,11 +254,11 @@
                                             <div class="form-group col-md-12 text-sm-left">
                                                 <fieldset>
                                                     <div class="custom-control custom-radio mb-1">
-                                                        <input required="" type="radio" id="r1q5" name="q5" class="custom-control-input" value="Studi Lanjut">
+                                                        <input required="" type="radio" id="r1q5" name="q5" class="custom-control-input" value="Studi Lanjut" onclick= "selectStudy()">
                                                         <label class="custom-control-label" for="r1q5">Studi Lanjut (S2/S3)</label>
                                                     </div>
                                                     <div class="custom-control custom-radio mb-1">
-                                                        <input required="" type="radio" id="r2q5" name="q5" class="custom-control-input" value="Bekerja">
+                                                        <input required="" type="radio" id="r2q5" name="q5" class="custom-control-input" value="Bekerja" onclick= "selectWork()">
                                                         <label class="custom-control-label" for="r2q5">Bekerja</label>
                                                     </div>
                                                     <div class="custom-control custom-radio mb-1">
@@ -296,27 +301,27 @@
                                                                             <div class="form-group col-md-12 text-sm-left">
                                                                                 <fieldset>
                                                                                     <div class="custom-control custom-radio mb-1">
-                                                                                        <input required="" type="radio" id="r1q6" name="q6" class="custom-control-input" value="1 sampai 3 bulan">
+                                                                                        <input type="radio" id="r1q6" name="q6" class="custom-control-input" value="1 sampai 3 bulan">
                                                                                         <label class="custom-control-label" for="r1q6">1 sampai 3 Bulan</label>
                                                                                     </div>
                                                                                     <div class="custom-control custom-radio mb-1">
-                                                                                        <input required="" type="radio" id="r2q6" name="q6" class="custom-control-input" value="4 sampai 6 bulan">
+                                                                                        <input type="radio" id="r2q6" name="q6" class="custom-control-input" value="4 sampai 6 bulan">
                                                                                         <label class="custom-control-label" for="r2q6">4 sampai 6 Bulan</label>
                                                                                     </div>
                                                                                     <div class="custom-control custom-radio mb-1">
-                                                                                        <input required="" type="radio" id="r3q6" name="q6" class="custom-control-input" value="7 sampai 9 bulan">
+                                                                                        <input type="radio" id="r3q6" name="q6" class="custom-control-input" value="7 sampai 9 bulan">
                                                                                         <label class="custom-control-label" for="r3q6">7 sampai 9 Bulan</label>
                                                                                     </div>
                                                                                     <div class="custom-control custom-radio mb-1">
-                                                                                        <input required="" type="radio" id="r4q6" name="q6" class="custom-control-input" value="10 sampai 12 bulan">
+                                                                                        <input type="radio" id="r4q6" name="q6" class="custom-control-input" value="10 sampai 12 bulan">
                                                                                         <label class="custom-control-label" for="r4q6">10 sampai 12 Bulan</label>
                                                                                     </div>
                                                                                     <div class="custom-control custom-radio mb-1">
-                                                                                        <input required="" type="radio" id="r5q6" name="q6" class="custom-control-input" value="lebih dari 1 tahun">
+                                                                                        <input type="radio" id="r5q6" name="q6" class="custom-control-input" value="lebih dari 1 tahun">
                                                                                         <label class="custom-control-label" for="r5q6">Lebih dari 1 Tahun</label>
                                                                                     </div>
                                                                                     <div class="custom-control custom-radio mb-1">
-                                                                                        <input required="" type="radio" id="r6q6" name="q6" class="custom-control-input" value="lebih dari 2 tahun">
+                                                                                        <input type="radio" id="r6q6" name="q6" class="custom-control-input" value="lebih dari 2 tahun">
                                                                                         <label class="custom-control-label" for="r6q6">Lebih dari 2 Tahun</label>
                                                                                     </div>
                                                                                 </fieldset>
@@ -339,15 +344,14 @@
                                                                 <div class="form-group">
                                                                     <label class="">Universitas</label>
                                                                     <div class="input-group">
-                                                                        <input type="text" name="q7" class="form-control" required="">
-                                                                        <input type="hidden" name="q7" value="universitas :">
+                                                                        <input id="univP2" type="text" name="q7a" class="form-control" required="">
+                                                                        <!-- <input type="hidden" name="q7a" value="universitas :"> -->
                                                                     </div>
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <label class="">Jurusan</label>
                                                                     <div class="input-group">
-                                                                        <input type="text" name="q7" class="form-control" required="">
-                                                                        <input type="hidden" name="q7" value="jurusan :">
+                                                                        <input id="jurusanP2" type="text" name="q7b" class="form-control" required="">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -369,31 +373,31 @@
                                                                                 <div class="form-group col-md-12 text-sm-left">
                                                                                     <fieldset>
                                                                                         <div class="custom-control custom-radio mb-1">
-                                                                                            <input required="" type="radio" id="r1q8" name="q8" class="custom-control-input" value="Biaya Sendiri / Keluarga" onclick="unlock4()" required="">
+                                                                                            <input type="radio" id="r1q8" name="q8" class="custom-control-input" value="Biaya Sendiri / Keluarga" onclick="unlock4()" required="">
                                                                                             <label class="custom-control-label" for="r1q8">[1] Biaya Sendiri / Keluarga</label>
                                                                                         </div>
                                                                                         <div class="custom-control custom-radio mb-1">
-                                                                                            <input required="" type="radio" id="r2q8" name="q8" class="custom-control-input" value="Beasiswa ADIK" onclick="unlock4()" required="">
+                                                                                            <input type="radio" id="r2q8" name="q8" class="custom-control-input" value="Beasiswa ADIK" onclick="unlock4()" required="">
                                                                                             <label class="custom-control-label" for="r2q8">[2] Beasiswa ADIK</label>
                                                                                         </div>
                                                                                         <div class="custom-control custom-radio mb-1">
-                                                                                            <input required="" type="radio" id="r3q8" name="q8" class="custom-control-input" value="Beasiswa BIDIKMISI" onclick="unlock4()" required="">
+                                                                                            <input type="radio" id="r3q8" name="q8" class="custom-control-input" value="Beasiswa BIDIKMISI" onclick="unlock4()" required="">
                                                                                             <label class="custom-control-label" for="r3q8">[3] Beasiswa BIDIKMISI</label>
                                                                                         </div>
                                                                                         <div class="custom-control custom-radio mb-1">
-                                                                                            <input required="" type="radio" id="r4q8" name="q8" class="custom-control-input" value="Beasiswa PPA" onclick="unlock4()" required="">
+                                                                                            <input type="radio" id="r4q8" name="q8" class="custom-control-input" value="Beasiswa PPA" onclick="unlock4()" required="">
                                                                                             <label class="custom-control-label" for="r4q8">[4] Beasiswa PPA</label>
                                                                                         </div>
                                                                                         <div class="custom-control custom-radio mb-1">
-                                                                                            <input required="" type="radio" id="r5q8" name="q8" class="custom-control-input" value="Beasiswa AFIRMASI" onclick="unlock4()" required="">
+                                                                                            <input type="radio" id="r5q8" name="q8" class="custom-control-input" value="Beasiswa AFIRMASI" onclick="unlock4()" required="">
                                                                                             <label class="custom-control-label" for="r5q8">[5] Beasiswa AFIRMASI</label>
                                                                                         </div>
                                                                                         <div class="custom-control custom-radio mb-1">
-                                                                                            <input required="" type="radio" id="r6q8" name="q8" class="custom-control-input" value="Beasiswa Perusahaan/Swasta" onclick="unlock4()" required="">
+                                                                                            <input type="radio" id="r6q8" name="q8" class="custom-control-input" value="Beasiswa Perusahaan/Swasta" onclick="unlock4()" required="">
                                                                                             <label class="custom-control-label" for="r6q8">[6] Beasiswa Perusahaan/Swasta</label>
                                                                                         </div>
                                                                                         <div class="custom-control custom-radio mb-1">
-                                                                                            <input required="" type="radio" id="r7q8" name="q8" class="custom-control-input" value="Lainya" onclick="unlock3()" required="">
+                                                                                            <input type="radio" id="r7q8" name="q8" class="custom-control-input" value="Lainya" onclick="unlock3()" required="">
                                                                                             <label class="custom-control-label" for="r7q8">[7] Lainnya, Tuliskan:</label>
                                                                                             <input type="form-control" name="q8" placeholder="Masukkan Jenis Beasiswa" id="fillter_sumberdana" disabled="">
                                                                                         </div>
@@ -443,7 +447,7 @@
                                                                                 <fieldset>
                                                                                     <div class="form-inline mb-2">
                                                                                         <div class="custom-control custom-radio ">
-                                                                                            <input required="" type="radio" id="r1q9" name="q9" class="custom-control-input" value="sebelum ujian" onclick="unlock2()" required="">
+                                                                                            <input  type="radio" id="r1q9" name="q9s" class="custom-control-input" value="sebelum ujian" onclick="unlock2()" required="">
                                                                                             <label class="custom-control-label" for="r1q9">Kira-kira</label>
                                                                                         </div>
                                                                                         <input type="number" name="q9" id="filter_bulan1" class="form-control form-control-sm mx-2" disabled="">
@@ -451,7 +455,7 @@
                                                                                     </div>
                                                                                     <div class="form-inline">
                                                                                         <div class="custom-control custom-radio ">
-                                                                                            <input required="" type="radio" id="r2q9" name="q9" class="custom-control-input" value="sesudah ujian" onclick="unlock1()" required="">
+                                                                                            <input type="radio" id="r2q9" name="q9s" class="custom-control-input" value="sesudah ujian" onclick="unlock1()" required="">
                                                                                             <label class="custom-control-label" for="r2q9">Kira-kira</label>
                                                                                         </div>
                                                                                         <input type="number" name="q9" class="form-control form-control-sm mx-2" id="filter_bulan2" disabled="">
@@ -478,15 +482,15 @@
                                                                 <div class="form-group">
                                                                     <label class="">Nama Instansi/Perusahaan</label>
                                                                     <div class="input-group">
-                                                                        <input type="text" name="q10" class="form-control" required="">
-                                                                        <input type="hidden" name="q10" value="instansi/perusahaan :">
+                                                                        <input type="text" id="instanP2" name="q10a" class="form-control" required="">
+                                                                        <!-- <input type="hidden" name="q10a" value="instansi/perusahaan :"> -->
                                                                     </div>
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <label class="">Bagian</label>
                                                                     <div class="input-group">
-                                                                        <input type="text" name="q10" class="form-control" required="">
-                                                                        <input type="hidden" name="q10" value="bagian :">
+                                                                        <input type="text" id="bagianP2" name="q10b" class="form-control" required="">
+                                                                        <!-- <input type="hidden" name="q10b" value="bagian :"> -->
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -507,8 +511,8 @@
                                                                         <div class="input-group-prepend">
                                                                             <span class="input-group-text">Rp</span>
                                                                         </div>
-                                                                        <input type="number" name="q11" class="form-control" required="">
-                                                                        <input type="hidden" name="q11a" value="total perolehan gaji pertama :">
+                                                                        <input type="number" id="q11" name="q11" class="form-control" required="">
+                                                                        <input type="hidden" value="total perolehan gaji pertama :">
                                                                     </div>
                                                                     <i class="small text-info">*Isilah dengan angka saja tanpa titik(.) / koma(,)</i>
                                                                 </div>
@@ -532,26 +536,24 @@
                                                                                     <div class="form-group col-md-12 text-sm-left">
                                                                                         <fieldset>
                                                                                             <div class="custom-control custom-radio mb-1">
-                                                                                                <input required="" type="radio" id="r1q12" name="q12" class="custom-control-input" value="LulusanD3">
-                                                                                                <label class="custom-control-label" for="r1q12">Lulusan D3 dalam waktu 3 bulan sejak bekerja</label>
+                                                                                                <input required="" type="radio" id="d3" class="custom-control-input" value="LulusanD3" onclick="switchQuestionsD3()">
+                                                                                                <label class="custom-control-label" for="d3">Lulusan D3 dalam waktu 3 bulan sejak bekerja</label>
                                                                                                 <div class="input-group">
                                                                                                     <div class="input-group-prepend">
                                                                                                         <span class="input-group-text">Rp</span>
                                                                                                     </div>
-                                                                                                    <input type="number" name="q12" class="form-control" required="">
-                                                                                                    <input type="hidden" name="q12a" value="total perolehan gaji d3 :">
+                                                                                                    <input type="number" id="formQ12a" name="q12a" class="form-control" required="">
                                                                                                 </div>
                                                                                                 <i class="small text-info">*Isilah dengan angka saja tanpa titik(.) / koma(,)</i>
                                                                                             </div>
                                                                                             <div class="custom-control custom-radio mb-1">
-                                                                                                <input required="" type="radio" id="r2q12" name="q12" class="custom-control-input" value="LulusanS1">
-                                                                                                <label class="custom-control-label" for="r2q12">Lulusan S1/S2 dalam waktu 6 bulan sejak bekerja</label>
+                                                                                                <input required="" type="radio" id="s1" class="custom-control-input" value="LulusanS1" onclick="switchQuestionsS1()">
+                                                                                                <label class="custom-control-label" for="s1">Lulusan S1/S2 dalam waktu 6 bulan sejak bekerja</label>
                                                                                                 <div class="input-group">
                                                                                                     <div class="input-group-prepend">
                                                                                                         <span class="input-group-text">Rp</span>
                                                                                                     </div>
-                                                                                                    <input type="number" name="q12" class="form-control" required="">
-                                                                                                    <input type="hidden" name="q12b" value="total perolehan gaji S1/S2 :">
+                                                                                                    <input type="number" id="formQ12b" name="q12b" class="form-control" required="">
                                                                                                 </div>
                                                                                                 <i class="small text-info">*Isilah dengan angka saja tanpa titik(.) / koma(,)</i>
                                                                                             </div>
@@ -1042,7 +1044,7 @@
 
         <div class="page-header row no-gutters py-4">
             <div class="col-12 text-center text-sm-center mt-4 mb-0">
-                <h3 class="page-title">#ElektroUnity</h3>
+                <h3 class="page-title" style="color: white">#ElektroUnity</h3>
             </div>
         </div>
     </div>
@@ -1287,6 +1289,68 @@
             $(selector).find("input:checkbox").prop('disabled', false);
             $(selector).fadeIn();
         }
+    }
+
+
+    // Problem 1
+    // code for D3/S1 
+    var selD3 = document.getElementById("d3");
+    var selS1 = document.getElementById("s1");
+    var Q12a = document.getElementById("formQ12a");
+    var Q12b = document.getElementById("formQ12b");
+
+    function switchQuestionsD3() {
+        // alert("Hello i am clicked");
+        selS1.required = false;
+        Q12b.required = false;
+    }
+
+    function switchQuestionsS1() {
+        // alert("Hi you clicked me");
+        selD3.required = false;
+        Q12a.required = false;
+    }
+
+    // Problem 2
+    var univP2 = document.getElementById("univP2");
+    var jurusanP2 = document.getElementById("jurusanP2");
+    var q11 = document.getElementById("q11");
+    var instanP2 = document.getElementById("instanP2");
+    var bagianP2 = document.getElementById("bagianP2");
+    var r1q9 = document.getElementById("r1q9");
+    var filterBulan1 = document.getElementById("r1q9");
+    var r2q9 = document.getElementById("r2q9");
+    var filterBulan2 = document.getElementById("r2q9");
+    var r1q13 = document.getElementById("r1q13");
+    var r2q13 = document.getElementById("r2q13");
+    var r3q13 = document.getElementById("r3q13");
+    var r4q13 = document.getElementById("r4q13");
+    var r1q14 = document.getElementById("r1q14");
+    var r2q14 = document.getElementById("r2q14");
+
+    function selectWork() {
+        univP2.required = false;
+        jurusanP2.required = false;
+    }
+
+    function selectStudy() {
+        selD3.required = false;
+        Q12a.required = false;
+        selS1.required = false;
+        Q12b.required = false;
+        q11.required = false;
+        instanP2.required = false;
+        bagianP2.required = false;
+        r1q9.required = false;
+        filterBulan1.required = false;
+        r2q9.required = false;
+        filterBulan2.required = false;
+        r1q13.required = false;
+        r2q13.required = false;
+        r3q13.required = false;
+        r4q13.required = false;
+        r1q14.required = false;
+        r2q14.required = false;
     }
 </script>
 

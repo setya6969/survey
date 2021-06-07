@@ -39,7 +39,7 @@
         if($mysqli->affected_rows)
         {
             // Triger to another page
-            header("location : ".BASE_URL."angket");
+            header('location: ../angket.php');
 
         }
         else

@@ -38,9 +38,8 @@
         // if affected rows 0, there is duplicated data
         if($mysqli->affected_rows)
         {
-            echo "Success add data to database";
             // Triger to another page
-            header("location : ".BASE_URL."angket.php");
+            header("location : ".BASE_URL."angket");
 
         }
         else

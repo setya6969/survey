@@ -44,20 +44,22 @@
     </script>
 </head>
 
-<body id="page-top">
+<body style="background-color: #198fe3;" id="page-top">
 
     <!-- Page Wrapper -->
     <div class="main-content-container container-fluid px-4">
         <!-- page header -->
         <div class="page-header row no-gutters py-4 mb-5">
-            <div class="col-12 text-center text-sm-center mb-0">
-                <img src="" alt="">
+            <div class="col-12 text-center text-sm-center mb-0" style="color: white;">
+                <a href="index.php">
+                    <img style="max-width=100"src="http://elektro.um.ac.id/wp-content/uploads/2016/02/logo-um.png" alt="Teknik Elektro – UM">    
+                </a>
                 <br>
-                <span class="text-uppercase page-subtitle">Teknik Elektro</span>
+                <!--<span class="text-uppercase page-subtitle">Teknik Elektro</span>-->
                 <h3 class="page-title mt-4">Teknik Elektro</h3>
             </div>
         </div>
-        <div align="center">
+        <div align="center" style="color: white;">
             <b>
                 <h5>Rekapitulasi Tracer Alumni</h5>
             </b>

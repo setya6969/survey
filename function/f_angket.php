@@ -181,7 +181,7 @@ else if ($q5 === "Bekerja") {
 
 // insert data to database;
 if ($mysqli->query($query)) {
-    echo "success insert data";
+    header('location: ../index.php');
 } else {
     echo "failed insert data with error (" . $mysqli->error . ")";
 }

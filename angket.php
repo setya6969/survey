@@ -99,7 +99,7 @@
         </div>
 
         <!-- FORM QUESTION 1-31 -->
-        <form action="koneksi.php" method="POST">
+        <form action="function/f_angket.php" method="POST">
             <div align="center">
                 <div class="col-lg-8 text-sm-left">
                     <div class="card card-small mb-4">

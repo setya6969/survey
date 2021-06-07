@@ -1,5 +1,5 @@
 <?php
-include_once "config.php";
+include_once "../config/config.php";
 if (isset($_POST['submit'])) {
 
     $q1  = $connect->real_escape_string($_POST['q1']);
